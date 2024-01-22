@@ -1,6 +1,7 @@
 import { Hono } from 'https://deno.land/x/hono/mod.ts'
 import { cors } from 'https://deno.land/x/hono/middleware.ts'
 
+
 import ProjectController from "./controllers/ProjectController.ts";
 import PersonalInfoController from "./controllers/PersonalInfoController.ts";
 import ContactInfoController from "./controllers/ContactInfoController.ts";
@@ -10,8 +11,9 @@ import { loadData } from "./dataLoader.ts";
 
 const app = new Hono({ strict: false });
 
-// Enable CORS for all routes under /api/*
+app.get('/', (c) => c.text('Portfolio backend, '))
 app.use('/api/*', cors({credentials: true}));
+app.use('/images/*', cors());
 
 app.route("/api/projects", ProjectController);
 app.route("/api/personalInfo", PersonalInfoController);
