@@ -12,6 +12,12 @@ const app = new Hono({ strict: false }).basePath("/api");
 
 // Enable CORS for all routes under /api/*
 app.use('/api/*', cors());
+app.use(
+  '/api/*',
+  cors({
+    origin: ['http://localhost:3000'],
+  })
+)
 
 app.route("/projects", ProjectController);
 app.route("/personalInfo", PersonalInfoController);
