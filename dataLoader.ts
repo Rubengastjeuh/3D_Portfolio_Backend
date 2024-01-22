@@ -1,10 +1,8 @@
-import { openKv, DenoKv } from 'https://deno.land/x/kv/mod.ts';
-// resolvers.ts
-import { ContactInfo } from "./models/IContactInfo";
-import { PersonalInfo } from "./models/IPersonalInfo";
-import { Project } from "./models/IProject";
-import { Study } from "./models/IStudy";
-import { Skill } from "./models/ISkill";
+import { ContactInfo } from "./models/IContactInfo.ts";
+import { PersonalInfo } from "./models/IPersonalInfo.ts";
+import { Project } from "./models/IProject.ts";
+import { Study } from "./models/IStudy.ts";
+import { Skill } from "./models/ISkill.ts";
 
 const personalInfo : PersonalInfo= {
   name: 'Ruben',
@@ -79,22 +77,22 @@ const projects :Project[] = [
 
 // Function to load data into the Deno KV database
 export const loadData = async () => {
-  const kv = await openKv({ name: 'DB' }); // Provide a unique name for your database
+  const kv = await Deno.openKv(); // Provide a unique name for your database
 
   // Store personalInfo
-  await kv.set('personalInfo', JSON.stringify(personalInfo));
+  await kv.set(['personalInfo','Ruben'], personalInfo);
 
   // Store contactInfo
-  await kv.set('contactInfo', JSON.stringify(contactInfo));
+  await kv.set(['contactInfo','Ruben'], contactInfo);
 
   // Store studies
-  await kv.set('studies', JSON.stringify(studies));
+  await kv.set(['studies','Ruben'], studies);
 
   // Store allSkills
-  await kv.set('allSkills', JSON.stringify(allSkills));
+  await kv.set(['allSkills','Ruben'], allSkills);
 
   // Store projects
-  await kv.set('projects', JSON.stringify(projects));
+  await kv.set(['projects','Ruben'], projects);
 
   console.log('Data loaded into the Deno KV database.');
 };
