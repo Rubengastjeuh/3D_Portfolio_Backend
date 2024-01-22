@@ -23,10 +23,11 @@ ProjectController.post("/", projectValidator, async (c) => {
 
 ProjectController.get("/:id", async (c) => {
   const { id } = c.req.param();
+  
   const record = await kv.get(["projects",id]);
   const project: Project = record.value as Project;
   if (!project) {
-    return c.json({ message: "Project not found" }, 404);
+    return c.json({ message: "Project not found",id: id }, 404);
   }
   return c.json(project);
 });
