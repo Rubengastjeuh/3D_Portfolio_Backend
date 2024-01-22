@@ -96,10 +96,15 @@ export const loadData = async () => {
   await kv.set(['skills','Ruben'], allSkills);
 
   // Store projects
+  const existingProjects = await kv.list({ prefix: ['projects', 'Ruben'] });
+for await (const projectRecord of existingProjects) {
+  await kv.delete(projectRecord.key);
+}
   for (const project of projects) {
-    const projectKey = ['projects', project.id];
+    const projectKey = ['projects', 'Ruben', project.id.toString()];
     await kv.set(projectKey, project);
   }
+
 
   console.log('Data loaded into the Deno KV database.');
 };

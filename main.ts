@@ -11,9 +11,8 @@ import { loadData } from "./dataLoader.ts";
 
 const app = new Hono({ strict: false });
 
-app.get('/', (c) => c.text('Portfolio backend, '))
+app.get('/', (c) => c.text('Portfolio backend'));
 app.use('/api/*', cors({credentials: true}));
-app.use('/images/*', cors());
 
 app.route("/api/projects", ProjectController);
 app.route("/api/personalInfo", PersonalInfoController);
