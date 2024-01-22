@@ -6,6 +6,7 @@ import { studyValidator } from "../validators/StudyValidator.ts";
 const StudyController = new Hono({ strict: false });
 const kv = await Deno.openKv();
 
+/*
 StudyController.get("/", async (c) => {
   const records = kv.list({ prefix: ["studies"] });
   const studies: Study[] = [];
@@ -13,11 +14,11 @@ StudyController.get("/", async (c) => {
     studies.push(record.value as Study);
   }
   return c.json(studies);
-});
+});*/
 
 StudyController.get("/:id", async (c) => {
   const { id } = c.req.param();
-  const record = await kv.get(["studies", Number.parseInt(id)]);
+  const record = await kv.get(["studies", id]);
   const study: Study = record.value as Study;
   if (!study) {
     return c.json({ message: "Study not found" }, 404);

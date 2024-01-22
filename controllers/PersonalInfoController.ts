@@ -5,6 +5,7 @@ import { personalInfoValidator } from "../validators/PersonalInfoValidator.ts";
 const PersonalInfoController = new Hono({ strict: false });
 const kv = await Deno.openKv();
 
+/*
 PersonalInfoController.get("/", async (c) => {
   const records = kv.list({ prefix: ["personalInfo"] });
   const personalInfos: PersonalInfo[] = [];
@@ -12,11 +13,11 @@ PersonalInfoController.get("/", async (c) => {
     personalInfos.push(record.value as PersonalInfo);
   }
   return c.json(personalInfos);
-});
+});*/
 
 PersonalInfoController.get("/:id", async (c) => {
   const { id } = c.req.param();
-  const record = await kv.get(["personalInfo", Number.parseInt(id)]);
+  const record = await kv.get(["personalInfo", id]);
   const personalInfo: PersonalInfo = record.value as PersonalInfo;
   if (!personalInfo) {
     return c.json({ message: "PersonalInfo not found" }, 404);
