@@ -23,7 +23,7 @@ ProjectController.post("/", projectValidator, async (c) => {
 
 ProjectController.get("/:id", async (c) => {
   const { id } = c.req.param();
-  const record = await kv.get(["projects",'Ruben',id]);
+  const record = await kv.get(["projects",id]);
   const project: Project = record.value as Project;
   if (!project) {
     return c.json({ message: "Project not found" }, 404);
@@ -33,12 +33,12 @@ ProjectController.get("/:id", async (c) => {
 
 ProjectController.delete("/:id", async (c) => {
   const { id } = c.req.param();
-  const record = await kv.get(["projects",'Ruben',id]);
+  const record = await kv.get(["projects",id]);
   const project: Project = record.value as Project;
   if (!project) {
     return c.json({ message: "Project not found" }, 404);
   }
-  await kv.delete(["projects",'Ruben',id]);
+  await kv.delete(["projects",id]);
   return c.json({ message: "Project successfully deleted" });
 });
 
