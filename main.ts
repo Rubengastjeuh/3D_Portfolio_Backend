@@ -8,14 +8,15 @@ import StudyController from "./controllers/StudyController.ts";
 import SkillController from "./controllers/SkillController.ts";
 import { loadData } from "./dataLoader.ts";
 
-const app = new Hono({ strict: false }).basePath("/api");
+const app = new Hono({ strict: false });
 
 // Enable CORS for all routes under /api/*
-app.use('/api/*', cors({ origin: '*' }));
-app.route("/projects", ProjectController);
-app.route("/personalInfo", PersonalInfoController);
-app.route("/contactInfo", ContactInfoController);
-app.route("/studies", StudyController);
-app.route("/skills", SkillController);
+app.use('/api/*', cors());
+
+app.route("/api/projects", ProjectController);
+app.route("/api/personalInfo", PersonalInfoController);
+app.route("/api/contactInfo", ContactInfoController);
+app.route("/api/studies", StudyController);
+app.route("/api/skills", SkillController);
 await loadData();
 Deno.serve(app.fetch);
