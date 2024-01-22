@@ -1,7 +1,7 @@
 import { Hono } from "https://deno.land/x/hono@v3.11.8/mod.ts";
 import ProjectController from "./controllers/ProjectController.ts"
-import PersonalInfoController from "./controllers/personalInfoController.ts";
-import ContactInfoController from "./controllers/contactInfoController.ts";
+import PersonalInfoController from "./controllers/PersonalInfoController.ts";
+import ContactInfoController from "./controllers/ContactInfoController.ts";
 import StudyController from "./controllers/StudyController.ts";
 import SkillController from "./controllers/SkillController.ts";
 
