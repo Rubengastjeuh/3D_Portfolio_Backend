@@ -1,7 +1,7 @@
 // StudyController.ts
 import { Hono } from "https://deno.land/x/hono@v3.11.8/mod.ts";
 import { Study } from "../models/IStudy.ts";
-import { studyValidator } from "../validators/studyValidator.ts";
+import { studyValidator } from "../validators/StudyValidator.ts";
 
 const StudyController = new Hono({ strict: false });
 const kv = await Deno.openKv();

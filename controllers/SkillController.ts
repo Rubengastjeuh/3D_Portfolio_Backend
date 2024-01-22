@@ -2,7 +2,7 @@
 // SkillController.ts
 import { Hono } from "https://deno.land/x/hono@v3.11.8/mod.ts";
 import { Skill } from "../models/ISkill.ts";
-import { skillValidator } from "../validators/skillValidator.ts";
+import { skillValidator } from "../validators/SkillValidator.ts";
 
 const SkillController = new Hono({ strict: false });
 const kv = await Deno.openKv();

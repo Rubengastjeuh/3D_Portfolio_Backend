@@ -1,6 +1,6 @@
 import { Hono } from "https://deno.land/x/hono@v3.11.8/mod.ts";
 import { PersonalInfo } from "../models/IPersonalInfo.ts";
-import { personalInfoValidator } from "../validators/personalInfoValidator.ts";
+import { personalInfoValidator } from "../validators/PersonalInfoValidator.ts";
 
 const PersonalInfoController = new Hono({ strict: false });
 const kv = await Deno.openKv();
