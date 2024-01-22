@@ -11,7 +11,6 @@ import { loadData } from "./dataLoader.ts";
 const app = new Hono({ strict: false }).basePath("/api");
 
 // Enable CORS for all routes under /api/*
-app.use('/api/*', cors());
 app.use(
   '/api/*',
   cors({
