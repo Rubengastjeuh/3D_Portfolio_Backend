@@ -1,6 +1,6 @@
 import { Hono } from "https://deno.land/x/hono@v3.11.8/mod.ts";
 import { Project } from "../models/IProject.ts";
-import { projectValidator } from "../validators/projectValidator.ts";
+import { projectValidator } from "../validators/ProjectValidator.ts";
 
 const ProjectController = new Hono({ strict: false });
 const kv = await Deno.openKv();
