@@ -11,7 +11,7 @@ import { loadData } from "./dataLoader.ts";
 const app = new Hono({ strict: false });
 
 // Enable CORS for all routes under /api/*
-app.use('/api/*', cors());
+app.use('/api/*', cors({credentials: true}));
 
 app.route("/api/projects", ProjectController);
 app.route("/api/personalInfo", PersonalInfoController);
