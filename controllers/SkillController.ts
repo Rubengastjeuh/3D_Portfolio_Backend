@@ -7,7 +7,7 @@ import { skillValidator } from "../validators/SkillValidator.ts";
 const SkillController = new Hono({ strict: false });
 const kv = await Deno.openKv();
 
-
+/*
 SkillController.get("/", async (c) => {
   const records = kv.list({ prefix: ["skills"] });
   const skills: Skill[] = [];
@@ -15,7 +15,7 @@ SkillController.get("/", async (c) => {
     skills.push(record.value as Skill);
   }
   return c.json(skills);
-});
+});*/
 
 SkillController.get("/:id", async (c) => {
   const { id } = c.req.param();

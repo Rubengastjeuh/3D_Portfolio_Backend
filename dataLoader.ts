@@ -93,7 +93,7 @@ export const loadData = async () => {
   await kv.set(['studies','Ruben'], studies);
 
   // Store allSkills
-  await kv.set(['allSkills','Ruben'], allSkills);
+  await kv.set(['skills','Ruben'], allSkills);
 
   // Store projects
   for (const project of projects) {
