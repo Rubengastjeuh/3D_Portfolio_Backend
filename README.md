@@ -26,7 +26,7 @@ Follow these steps to set up and run the Deno backend:
 
 5. **Run the Backend Locally:**
    ```bash
-   deno run --unstable --allow-net --allow-write --allow-read --allow-plugin --allow-env --unstable server.ts
+   deno task dev
    ```
    Open [http://localhost:3001](http://localhost:3001) in your browser to verify that the backend is running.
 
