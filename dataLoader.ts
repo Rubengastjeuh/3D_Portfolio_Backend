@@ -77,6 +77,38 @@ const projects :Project[] = [
     ageWhenDone: 21, // Update with the correct age
     image: 'https://firebasestorage.googleapis.com/v0/b/wildcamping-mad.appspot.com/o/logoColor.png?alt=media&token=7ff175f8-62e7-45c1-b47d-867cf5057d6e', // Add the URL or path to the image
   },
+  {
+    id: 5,
+    title: 'Steel And Outdoor Design',
+    description: 'An innovative website crafted using Laravel and Blade. This dynamic site boasts admin tools, a user-friendly interface, and responsiveness. It serves as a gallery where administrators can showcase realizations and their accompanying details. The platform also features a dedicated contact page for seamless user interaction.',
+    skills: ['Laravel', 'Blade', 'MySQL', 'SCSS', 'JavaScript'],
+    ageWhenDone: 20, // Update with the correct age
+    image: 'https://firebasestorage.googleapis.com/v0/b/wildcamping-mad.appspot.com/o/logoColor.png?alt=media&token=7ff175f8-62e7-45c1-b47d-867cf5057d6e', // Add the URL or path to the image
+  },
+  {
+    id: 6,
+    title: 'Smart Foosball',
+    description: 'Revolutionizing the classic foosball experience, this smart foosball table is equipped with sensors in each goal. The score is automatically updated and displayed on SPI TFT displays. A user-friendly interface controlled by buttons allows for easy management. LED strips on the frame interact dynamically with the game. The ESP8266 module ensures online data storage and display, powered by a dedicated transformer.',
+    skills: ['ESP8266', 'Arduino', 'Electrical Engineering'],
+    ageWhenDone: 20, // Update with the correct age
+    image: 'https://firebasestorage.googleapis.com/v0/b/wildcamping-mad.appspot.com/o/logoColor.png?alt=media&token=7ff175f8-62e7-45c1-b47d-867cf5057d6e', // Add the URL or path to the image
+  },
+  {
+    id: 7,
+    title: 'WildCamping',
+    description: 'Embark on outdoor adventures with the WildCamping React Native app. Explore, add, edit, and review camping locations with ease. The app offers seamless offline functionality and user interaction. With a beautiful design, it utilizes Firebase for data storage and management, ensuring a smooth camping experience.',
+    skills: ['React Native', 'Firebase', 'Expo', 'Firestore', 'CSS', 'JavaScript'],
+    ageWhenDone: 21, // Update with the correct age
+    image: 'https://firebasestorage.googleapis.com/v0/b/wildcamping-mad.appspot.com/o/logoColor.png?alt=media&token=7ff175f8-62e7-45c1-b47d-867cf5057d6e', // Add the URL or path to the image
+  },
+  {
+    id: 8,
+    title: 'SportingBus',
+    description: 'Simplify away game logistics with the SportingBus system designed for football supporters\' clubs. Reserve tickets, view upcoming away games, and manage your journey effortlessly. This website, built with Vue, Laravel, and MySQL, provides a user-friendly interface for supporters.',
+    skills: ['Vue', 'Laravel', 'MySQL', 'CSS', 'JavaScript'],
+    ageWhenDone: 21, // Update with the correct age
+    image: 'https://firebasestorage.googleapis.com/v0/b/wildcamping-mad.appspot.com/o/logoColor.png?alt=media&token=7ff175f8-62e7-45c1-b47d-867cf5057d6e', // Add the URL or path to the image
+  },
 ];
 
 // Function to load data into the Deno KV database
