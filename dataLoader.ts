@@ -9,7 +9,7 @@ const personalInfo : PersonalInfo= {
   age: 21,
   dateOfBirth: '2002-12-23',
   nationality: 'Belgian',
-  description: 'Dedicated and enthusiastic web developer with a strong emphasis on front-end technologies. Leveraging a creative and detail-oriented approach, I am passionate about crafting engaging and user-friendly digital experiences. With a solid foundation in HTML, CSS, and JavaScript, I continuously explore and integrate cutting-edge frameworks and libraries to deliver visually appealing and highly functional websites. Committed to staying abreast of industry trends and best practices, I thrive on transforming design concepts into responsive, dynamic, and intuitive user interfaces. My goal is to contribute innovative solutions and elevate the overall user experience through my skills in web development.',
+  description: 'Passionate web developer specializing in front-end technologies with expertise in React, Vue, React Native, and a strong foundation in HTML, CSS, and JavaScript. Experienced in Laravel, Blade, MySQL, SCSS, and familiar with ESP8266, Arduino, and Electrical Engineering. Proficient in Firebase, Expo, and Firestore. Continuously exploring and adapting to emerging technologies, such as Deno, Node, Three.js, TypeScript, and NoSQL."',
   languages: ['English', 'Dutch','French'],
 };
 const contactInfo : ContactInfo= {
