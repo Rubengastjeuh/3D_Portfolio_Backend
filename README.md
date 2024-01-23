@@ -1,6 +1,6 @@
 # 3D Portfolio Deno Backend
 
-Welcome to the 3D Portfolio Deno Backend! This backend is built with Deno and designed to complement the [3D Portfolio Frontend](https://github.com/Rubengastjeuh/3D_Portfolio_Frontend).
+Welcome to the 3D Portfolio Deno Backend! This backend is built with Deno and designed to complement the [3D Portfolio Frontend](https://github.com/Rubengastjeuh/3D_Portfolio).
 
 ## Getting Started
 
